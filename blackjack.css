@@ -1,0 +1,136 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    background-color: #00c0ff;
+}
+
+#dealer-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+    position: relative;
+    right: 500px;
+    top: 150px;
+}
+
+.dealer {
+    position: relative;
+    top: 100px;
+    right: 500px;
+}
+#your-cards img {
+    height: 175px;
+    width: 125px;
+    margin: 1px;
+    position: relative;
+    left: 500px;
+    bottom: 110px;
+}
+.you {
+    position: relative;
+    bottom: 160px;
+    left: 500px;
+}
+
+#hit {
+    font-family: var(--mainfont);
+    padding: 15px 30px;
+    font-weight: bolder;
+    background: white;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    font-size: 1.15rem;
+    transition: 100ms;
+    position: relative;
+    left: -30px;
+}
+
+#hit:hover{
+    background-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 80%, #00c0ff 100%);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    animation: slidebg 2s linear infinite;
+}
+
+#hit:active{
+    background: rgb(0, 128, 255);
+    border: none;
+    color: white;
+}
+
+@keyframes slidebg {
+    to {
+        background-position: 20vw;
+    }
+}
+
+#stay {
+    font-family: var(--mainfont);
+    padding: 15px 30px;
+    font-weight: bold;
+    background: white;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    font-size: 1.15rem;
+    transition: 100ms;
+    position: relative;
+    left: 30px;
+}
+
+#stay:active{
+    background: rgb(0, 128, 255);
+    border: none;
+    color: white;
+}
+
+#stay:hover{
+    background-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 80%, #00c0ff 100%);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    animation: slidebg 2s linear infinite;
+}
+
+.resetbtn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: var(--mainfont);
+    padding: 5px 5px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.486);
+    border: 0;
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    transition: 100ms;
+}
+
+.resetbtn:hover {
+    box-shadow: none;
+    background: rgb(52, 255, 113);
+}
+
+#resetbtn {
+    color: red;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 100ms ease-in-out;
+}
+
+#resetbtn:hover {
+    color: blue;
+    box-shadow: none;
+}
+
+#resetbtn::after {
+    font-size: 1rem;
+    content: " Start på nytt";
+}
+
+#results{
+    font-size: large;
+    font-weight: bold;
+}
