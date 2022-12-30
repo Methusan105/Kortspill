@@ -116,7 +116,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setRandomColor();
 });
+document.addEventListener("DOMContentLoaded", function () {
+  const hit = document.getElementById("hit");
 
+  function setRandomColor() {
+    const colors = ["red", "green", "blue", "indigo", "violet"];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    hit.style.color = color;
+    hit.style.webkitTextFillColor = color;
+    hit.style.MozTextFillColor = color;
+  }
+
+  setRandomColor();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const stay = document.getElementById("stay");
+
+  function setRandomColor() {
+    const colors = ["red", "green", "blue", "indigo", "violet"];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    stay.style.color = color;
+    stay.style.webkitTextFillColor = color;
+    stay.style.MozTextFillColor = color;
+  }
+
+  setRandomColor();
+});
 
 
 
