@@ -9,27 +9,46 @@ body {
     width: 125px;
     margin: 1px;
     position: relative;
-    right: 500px;
-    top: 150px;
+    right: 400px;
+    top: 250px;
+}
+.Overskrift{
+    position: relative;
+    top: 20px;
+}
+.container {
+    position: relative;
+    bottom: 200px;
+    left: 475px;
+    width: 1000px;
+    height: 200px;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-shrink {
+    font-size: 17px;
+    font-weight: bold;
+}
 .dealer {
     position: relative;
-    top: 100px;
-    right: 500px;
+    top: 225px;
+    right: 400px;
 }
 #your-cards img {
     height: 175px;
     width: 125px;
     margin: 1px;
     position: relative;
-    left: 500px;
-    bottom: 110px;
+    left: 400px;
+    bottom: 200px;
 }
 .you {
     position: relative;
-    bottom: 160px;
-    left: 500px;
+    bottom: 225px;
+    left: 400px;
 }
 
 #hit {
@@ -43,6 +62,7 @@ body {
     font-size: 1.15rem;
     transition: 100ms;
     position: relative;
+    bottom: 175px;
     left: -30px;
 }
 
@@ -77,6 +97,7 @@ body {
     font-size: 1.15rem;
     transition: 100ms;
     position: relative;
+    bottom: 175px;
     left: 30px;
 }
 
@@ -133,4 +154,6 @@ body {
 #results{
     font-size: large;
     font-weight: bold;
+    position: relative;
+    bottom: 150px;
 }
