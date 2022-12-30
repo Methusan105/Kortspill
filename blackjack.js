@@ -60,6 +60,64 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const OS = document.querySelector(".Overskrift");
+
+  function setRandomColor() {
+    const colors = [
+      "red",
+      "orange",
+      "yellow",
+      "green",
+      "blue",
+      "indigo",
+      "violet",
+    ];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    OS.style.color = color;
+    OS.style.webkitTextFillColor = color;
+    OS.style.MozTextFillColor = color;
+  }
+
+  setRandomColor();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const res = document.getElementById("results");
+
+  function setRandomColor() {
+    const colors = [
+      "red",
+      "yellow",
+      "green",
+      "blue",
+      "indigo",
+      "violet",
+    ];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    res.style.color = color;
+    res.style.webkitTextFillColor = color;
+    res.style.MozTextFillColor = color;
+  }
+
+  setRandomColor();
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const text = document.querySelector(".text-shrink");
+
+  function setRandomColor() {
+    const colors = ["red", "yellow", "green", "blue", "indigo", "violet"];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    text.style.color = color;
+    text.style.webkitTextFillColor = color;
+    text.style.MozTextFillColor = color;
+  }
+
+  setRandomColor();
+});
+
+
 
 
 function buildDeck() {
