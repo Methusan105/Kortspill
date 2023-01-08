@@ -1,57 +1,90 @@
+/*  Denne koden inneholder CSS-stilsettinger for HTML-dokumentet. */
+/* Stilsettingene gjelder for hele body-elementet og for img-elementer innenfor "dealer-cards" -id-en. */
 body {
+    /* For body-elementet settes skrifttypen til "Ubuntu" og tekstjustering til sentrert. Bakgrunnsfargen settes til #00c0ff (en lys blåfarge). */
     font-family: 'Ubuntu', sans-serif;
     text-align: center;
     background-color: #00c0ff;
 }
 
 #dealer-cards img {
+    /* For img-elementer innenfor "dealer-cards" -id-en settes høyden til 175px,
+        bredden til 125px,
+        margen til 1px,
+        posisjonen til relative,
+        høydejusteringen til 230px og breddejusteringen til 400px. */
     height: 175px;
     width: 125px;
     margin: 1px;
     position: relative;
     right: 400px;
-    top: 250px;
+    top: 230px;
 }
-.Overskrift{
+
+.Overskrift {
+    /* For elementer med klassen "Overskrift" settes posisjonen til relative og høydejusteringen til 20px. */
     position: relative;
     top: 20px;
 }
-.container {
-    position: relative;
-    bottom: 200px;
-    left: 475px;
-    width: 1000px;
-    height: 200px;
-}
 
-.text-center {
-    text-align: center;
-}
-
-.text-shrink {
-    font-size: 17px;
-    font-weight: bold;
-}
 .dealer {
+    /* For elementer med klassen "dealer" settes posisjonen til relative,
+        høydejusteringen til 210px og breddejusteringen til 400px. Visningsformen settes til inline-block. */
     position: relative;
-    top: 225px;
+    top: 210px;
     right: 400px;
+    display: inline-block;
 }
+
 #your-cards img {
+    /* For img-elementer innenfor "your-cards" -id-en settes høyden til 175px,
+        bredden til 125px,
+        margen til 1px,
+        posisjonen til relative,
+        høydejusteringen til 170px og breddejusteringen til 400px. */
     height: 175px;
     width: 125px;
     margin: 1px;
     position: relative;
     left: 400px;
+    bottom: 170px;
+}
+.tekst{
+    /* For elementer med klassen "tekst" settes skrifttypen til "Ubuntu",
+        skriftvekten til bold,
+        padding til 10px,
+        visningsformen til block,
+        margen til auto,
+        bredden til 50%,
+        posisjonen til relative og høydejusteringen til 200px.*/
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    width: 50%;
+    position: relative;
     bottom: 200px;
 }
 .you {
+    /* For elementer med klassen "you" settes posisjonen til relative,
+        høydejusteringen til 190px og breddejusteringen til 405px. Visningsformen settes til inline-block. */
     position: relative;
-    bottom: 225px;
-    left: 400px;
+    bottom: 190px;
+    left: 405px;
+    display: inline-block;
 }
 
 #hit {
+    /* For elementer med id-en "hit" settes skrifttypen til "var(--mainfont)",
+        padding til 15px 30px,
+        skriftvekten til bolder,
+        bakgrunnsfargen til hvit,
+        kanten til 0,
+        kantradiusen til 10px,
+        skuggeeffekten til "var(--shadow)",
+        skriftstørrelsen til 1.15rem,
+        overgangen til 100ms og posisjonen til relative med høydejusteringen til 55px og breddejusteringen til -20px. */
     font-family: var(--mainfont);
     padding: 15px 30px;
     font-weight: bolder;
@@ -62,31 +95,51 @@ body {
     font-size: 1.15rem;
     transition: 100ms;
     position: relative;
-    bottom: 175px;
-    left: -30px;
+    bottom: 55px;
+    left: -20px;
 }
 
-#hit:hover{
-    background-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 80%, #00c0ff 100%);
+#hit:hover {
+    /* Når musen holdes over elementet med id-en "hit",
+        settes bakgrunnsfargen til #ffff00,
+        kantradiusen til 5px,
+        plasseringen av elementene til sentrert,
+        animasjonen til "slidein" med en varighet på 1 sekund,
+        en lineær overgang og en uendelig repetisjon. */
+    background-color: #ffff00;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    animation: slidebg 2s linear infinite;
+    animation: slidein 1s linear infinite;
 }
 
-#hit:active{
+#hit:active {
+    /* Når elementet med id-en "hit" trykkes på,
+        settes bakgrunnsfargen til rgb(0, 128, 255),
+        kanten til 0,
+        fargen på teksten til hvit. */
     background: rgb(0, 128, 255);
     border: none;
     color: white;
 }
 
-@keyframes slidebg {
-    to {
-        background-position: 20vw;
+@keyframes slidein {
+    /* For animasjonen "slidein" settes bakgrunnsfargen til transparent når animasjonen starter. */
+    from {
+        background-color: transparent;
     }
 }
 
 #stay {
+    /* For elementer med id-en "stay" settes skrifttypen til "var(--mainfont)",
+        padding til 15px 30px,
+        skriftvekten til bold,
+        bakgrunnsfargen til hvit,
+        kanten til 0,
+        kantradiusen til 10px,
+        skuggeeffekten til "var(--shadow)",
+        skriftstørrelsen til 1.15rem,
+        overgangen til 100ms og posisjonen til relative med høydejusteringen til 55px og breddejusteringen til 30px. */
     font-family: var(--mainfont);
     padding: 15px 30px;
     font-weight: bold;
@@ -97,25 +150,44 @@ body {
     font-size: 1.15rem;
     transition: 100ms;
     position: relative;
-    bottom: 175px;
+    bottom: 55px;
     left: 30px;
 }
 
-#stay:active{
+#stay:active {
+    /* Når elementet med id-en "stay" trykkes på,
+        settes bakgrunnsfargen til rgb(0, 128, 255),
+        kanten til 0 og fargen på teksten til hvit. */
     background: rgb(0, 128, 255);
     border: none;
     color: white;
 }
 
-#stay:hover{
-    background-image: linear-gradient(90deg, #00c0ff 0%, #ffcf00 49%, #fc4f4f 80%, #00c0ff 100%);
+#stay:hover {
+    /* Når musen holdes over elementet med id-en "stay",
+        settes bakgrunnsfargen til #ffff00,
+        kantradiusen til 5px,
+        plasseringen av elementene til sentrert,
+        animasjonen til "slidein" med en varighet på 1 sekund,
+        en lineær overgang og en uendelig repetisjon. */
+    background-color: #ffff00;
     border-radius: 5px;
     align-items: center;
     justify-content: center;
-    animation: slidebg 2s linear infinite;
+    animation: slidein 1s linear infinite;
 }
 
 .resetbtn {
+    /* For elementer med klassen "resetbtn" settes posisjonen til absolute,
+        høydejusteringen til 20px,
+        breddejusteringen til 20px,
+        skrifttypen til "var(--mainfont)",
+        padding til 5px 5px,
+        skriftvekten til bold,
+        bakgrunnsfargen til rgba(0, 0, 0, 0.486),
+        kanten til 0,
+        kantradiusen til 4px,
+        skuggeeffekten til "var(--shadow)" og overgangen til 100ms. */
     position: absolute;
     top: 20px;
     left: 20px;
@@ -130,11 +202,18 @@ body {
 }
 
 .resetbtn:hover {
+    /* Når musen holdes over elementet med klassen "resetbtn",
+        settes skuggeeffekten til none,
+        bakgrunnsfargen til rgb(52, 255, 113). */
     box-shadow: none;
     background: rgb(52, 255, 113);
 }
 
 #resetbtn {
+    /* For elementer med id-en "resetbtn" settes fargen til rød,
+        skriftstørrelsen til 2rem,
+        musepekeren til "pointer",
+        overgangen til 100ms med en ease-in-out-effekt. */
     color: red;
     font-size: 2rem;
     cursor: pointer;
@@ -142,18 +221,25 @@ body {
 }
 
 #resetbtn:hover {
+    /* Når musen holdes over elementet med id-en "resetbtn",
+        settes fargen til blå,
+        skuggeeffekten til ingen. */
     color: blue;
     box-shadow: none;
 }
 
 #resetbtn::after {
+    /* For elementer med id-en "resetbtn" legges det til en pseudo-element "after" med skriftstørrelsen 1rem og innholdet "Start på nytt" . */
     font-size: 1rem;
     content: " Start på nytt";
 }
 
-#results{
+#results {
+    /* For elementer med id-en "results" settes skriftstørrelsen til large,
+        skriftvekten til bold,
+        posisjonen til relative og høydejusteringen til 40px. */
     font-size: large;
     font-weight: bold;
     position: relative;
-    bottom: 150px;
+    bottom: 40px;
 }
