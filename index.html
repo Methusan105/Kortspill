@@ -1,39 +1,47 @@
+<!-- Dette er HTML-dokumentet for kortspillet Black Jack. -->
+<!-- Det inneholder strukturen til nettsiden, inkludert overskrift, tekst, bilder, knapper, inputfelter og annen innhold. -->
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Kortspill</title>
-        <link rel="stylesheet" href="blackjack.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
-        <script src="blackjack.js"></script>
-    </head>
 
-    <body>
-        <h1 class="Overskrift">Black Jack</h1>
-        <h2 class="dealer" id="dealer">Dealer: <span id="dealer-sum"></span></h2>
-        <div id="dealer-cards">
-            <img id="hidden" src="./cards/BACK.png">
-        </div>
-            <div class="container">
-                <div class="text-center text-shrink">I kortspillet blackjack er målet å få en hånd så nær 21 uten å gå over. Hver spiller får to kort i begynnelsen av
-                spillet og konkurrerer mot dealeren. Spilleren har muligheten til å bli og ikke trekke flere kort, eller de kan velge å
-                trekke flere kort i et forsøk på å komme nærmere 21. Spilleren vil tape umiddelbart hvis alderen deres overstiger 21.
-                Dealeren må fortsette å trekke kort når spilleren bestemmer seg for å bli til de har en håndverdi på 17 eller mer. Hvis
-                giverens poengsum overstiger 21, vinner spilleren direkte. Hvis ikke, vinner spilleren med den høyest verdsatte hånden
-                som er under 21. Andre metoder for å vinne i blackjack inkluderer å få en "naturlig" Blackjack (et ess og et kort verdt
-                10) eller at dealeren har en hånd som er verdt mindre enn spillerens hånd, men ikke mer enn 21.</div>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kortspill</title>
+    <!-- Dokumentet bruker også CSS for å style innholdet og JavaScript for å legge til funksjonalitet. -->
+    <!-- Linken til CSS-filen og JavaScript-filen er inkludert i head-delen av dokumentet, sammen med linken til fonten "Ubuntu" fra Google Fonts. -->
+    <link rel="stylesheet" href="blackjack.css">
+    <!-- Det er også en "preconnect" link til Google Fonts-tjenesten for å forbedre ytelsen. -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+    <script src="blackjack.js"></script>
+</head>
 
-        <h2 class="you" id="you">You: <span id="your-sum"></span></h2>
-        <div id="your-cards"></div>
+<body>
+    <!-- Body-delen inneholder tittelen "Black Jack", teksten som forklarer spillet og elementer som dealer- og spiller-overskriftene, kortbildene, knappene for å "Hit" eller "Stay", resultatteksten og en resetknapp for å starte spillet på nytt.
+ -->
+    <h1 class="Overskrift">Black Jack</h1>
+    <h2 class="dealer" id="dealer">Dealer: <span id="dealer-sum"></span></h2>
+    <div id="dealer-cards">
+        <img id="hidden" src="./cards/BACK.png">
+    </div>
+    <p class="tekst">I kortspillet blackjack er målet å få en hånd så nær 21 uten å gå over. Hver spiller får to kort i begynnelsen av
+    spillet og konkurrerer mot dealeren. Spilleren har muligheten til å bli og ikke trekke flere kort, eller de kan velge å
+    trekke flere kort i et forsøk på å komme nærmere 21. Spilleren vil tape umiddelbart hvis alderen deres overstiger 21.
+    Dealeren må fortsette å trekke kort når spilleren bestemmer seg for å bli til de har en håndverdi på 17 eller mer. Hvis
+    giverens poengsum overstiger 21, vinner spilleren direkte. Hvis ikke, vinner spilleren med den høyest verdsatte hånden
+    som er under 21. Andre metoder for å vinne i blackjack inkluderer å få en "naturlig" Blackjack (et ess og et kort verdt
+    10) eller at dealeren har en hånd som er verdt mindre enn spillerens hånd, men ikke mer enn 21.</p>
 
-        <br>
-        <input type="button" value=" Hit  " id="hit">
-        <input type="button" value=" Stay " id="stay">
-        <p id="results"></p>
-        <div class="resetbtn"><a id="resetbtn" onclick="location.reload();">↺</a></div>
-    </body>
+    <h2 class="you" id="you">You:<span id="your-sum"></span></h2>
+    <div id="your-cards"></div>
+
+    <br>
+    <input type="button" value=" Hit  " id="hit">
+    <input type="button" value=" Stay " id="stay">
+    <p id="results"></p>
+    <!--  Resetknappen har en "onclick" funksjon som gir instruksjoner om å laste inn siden på nytt når den klikkes på. -->
+    <div class="resetbtn"><a id="resetbtn" onclick="location.reload();">↺</a></div>
+</body>
+
 </html>
